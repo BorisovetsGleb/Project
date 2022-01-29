@@ -2,6 +2,7 @@
 
 void sa(vector <int>& a)
 {
+    if (a.size() < 2) { return; }
     vector <int> out = {};
     int i = 0;
     if (a.size() > 1) {
@@ -17,6 +18,7 @@ void sa(vector <int>& a)
 
 void sb(vector <int>& b)
 {
+    if (b.size() < 2) { return; }
     vector <int> out = {};
     int i = 0;
     if (b.size() > 1) {
@@ -32,6 +34,7 @@ void sb(vector <int>& b)
 
 void ss(vector <int>& a, vector <int>& b)
 {
+    if (a.size() < 2 && b.size() < 2) { return; }
     vector <int> out = {};
     int i = 0;
     if (a.size() > 1) {
@@ -58,6 +61,7 @@ void ss(vector <int>& a, vector <int>& b)
 
 void pa(vector <int>& a, vector <int>& b)
 {
+    if (a.size() < 2 && b.size() < 2) { return; }
     vector <int> out, out2;
     int i = 0, i2 = 1;
     if (b.size() != 0)
@@ -72,6 +76,7 @@ void pa(vector <int>& a, vector <int>& b)
 
 void pb(vector <int>& a, vector <int>& b)
 {
+    if (a.size() < 2 && b.size() < 2) { return; }
     vector <int> out, out2;
     int i = 0, i2 = 1;
     if (a.size() != 0)

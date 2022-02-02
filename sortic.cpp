@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <vector>
+#include <fstream>
+#include <windows.h>
 #include "Header.h"
 
 using namespace std;
@@ -15,11 +17,25 @@ int main()
         cin >> s;
     }
     cout << endl;
+    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+    cout << "Programm started:";
+    SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
-    //pb(a, b);
-    sortic(a, b);
-    cout << endl << "a:" << endl;
+    cout << endl << "A:" << endl;
     out(a);
-    cout << endl << "b:" << endl;
+    cout << endl << "B:" << endl;
+    out(b);
+    cout << endl << endl;
+
+    sortic(a, b);
+
+    SetConsoleTextAttribute(handle, FOREGROUND_GREEN);
+    cout << "Programm finished:";
+    SetConsoleTextAttribute(handle, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+
+    cout << endl << "A:" << endl;
+    out(a);
+    cout << endl << "B:" << endl;
     out(b);
 }

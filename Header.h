@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include <Windows.h>
 
 using namespace std;
 
@@ -16,6 +18,10 @@ void pb(vector <int>& a, vector <int>& b);
 //f2.cpp
 void ra(vector <int>& a);
 void rb(vector <int>& b);
+void rr(vector<int>& a, vector<int>& b);
+void rra(vector<int>& a);
+void rrb(vector<int>& b);
+void rrr(vector<int>& a, vector<int>& b);
 
 //out.cpp
 void out(vector <int> a);
